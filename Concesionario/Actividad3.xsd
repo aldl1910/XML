@@ -6,7 +6,6 @@
                 <cs:element name="coche" masOccurs="unbounded">
                     <cs:complexType>
                         <cs:sequence>
-                            <cs:element name="codigo" masOccurs="unbounded"/>
                             <cs:element name="matricula" masOccurs="unbounded"/>
                             <cs:element name="marca" masOccurs="unbounded"/>
                             <cs:element name="modelo" masOccurs="unbounded">

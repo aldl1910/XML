@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE clientes SYSTEM "clientes.dtd">
-<clientes>
+<clientes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="clientes.xsd">
     <sede codigo="A0007891">
         <direccion></direccion>
         <direccion></direccion>

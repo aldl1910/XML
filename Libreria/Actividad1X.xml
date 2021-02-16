@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Definición del documento XML-->
-<!DOCTYPE listalibro SYSTEM "Actividad1.dtd">
-<listalibro>
+
+<listalibro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="Actividad1.xsd">
     <libro> 
         <autores>
             <autor>

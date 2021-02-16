@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    version="0.1" xml:lang="es">
+    <xs:annotation>
+        <xs:documentation xml:lang="Es-es">
+            Esquema para clientes en sede
+            <fecha>04-02-2021</fecha>
+            <autor>Antonio Luis Dominguez Lebron</autor>
+        </xs:documentation>
+    </xs:annotation>
+	<xs:element name="clientes">
+		<xs:complexType>
+			<xs:sequence minOccurs="1" maxOccurs="unbounded">
+				<xs:element name="sede" minOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element minOccurs="0" maxOccurs="unbounded" name="direccion" type="xs:string" />
+                            <xs:element name="empleado" type="xs:string" />
+                            <xs:element name="Fecha" type="xs:dateTime" />
+                            <xs:element name="Descripcion" minOccurs="0">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Solvente"/>
+                                        <xs:enumeration value="Insolvente"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="codcliente" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="numero" type="xs:positiveInteger" />
+                                        <xs:element name="coste" type="xs:decimal" />
+                                        <xs:element name="resumen" type="xs:string" />
+                                        <xs:element name="plazo" type="xs:date" />
+                                    </xs:sequence>
+                                    <xs:attribute name="codigo" use="required">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:pattern value="[A-Z]{3}-[0-9]{3}"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="codigo" type="codigoCliente" use="required" />
+                    </xs:complexType>
+                </xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+    <xs:simpleType name="codigoCliente">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Za-z]{1}[0-9A-Za-z]{7}"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

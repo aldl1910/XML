@@ -1,13 +1,6 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE Bsms
-[
-    <!ELEMENT Bsms (sms*)>
-    <!ELEMENT sms (telefono, fecha, hora, mensaje)>
-    <!ELEMENT telefono (#PCDATA)>
-    <!ELEMENT fecha (#PCDATA)>
-    <!ELEMENT hora (#PCDATA)>
-    <!ELEMENT mensaje (#PCDATA)>
-]>
+<?xml version="1.0" encoding="UTF-8"?>
+<Bsms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="sms.xsd">
     <sms>
         <telefono>910 20 37 97</telefono>
         <fecha>19/6/2001</fecha>
